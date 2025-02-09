@@ -1,0 +1,22 @@
+hostname: exocortex-01.server.internal
+basedomain: server.internal
+
+locale: us_EN.UTF-8
+timezone: America/Chicago
+
+admin:
+  username: rob
+  fullname: Robert Young
+  key: "{{ lookup('file', '~/.ssh/ed25519.pub') }}"
+  email: "thegreekgeekster@gmail.com"
+
+services:
+  traefik:
+    dashboard_user: admin
+    dashboard_password: ""
+  portainer:
+    admin_username: "admin" # not used in playbooks!
+    admin_password: ""
+  uptimekuma:
+    admin_username: "admin" # not used in playbooks!
+    admin_password: "" # not used in playbooks!
